@@ -1,0 +1,25 @@
+[color]
+    branch = auto
+    diff   = auto
+    status = auto
+[alias]
+    st          = status --short
+    co          = checkout
+    br          = branch
+    lg          = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    logfull     = log --pretty=fuller --graph --stat -p
+    unstage     = reset HEAD
+    # there should be an article on what this command do
+    uncommit    = !zsh -c '"if (($0)); then nb=$(( $0 - 1 )); else nb=0; fi; i=0; while ((i<=nb)); do git revert -n --no-edit HEAD~$i; ((i++)); done; git commit -m \"revert to $0 version(s) back\""'
+    undomerge   = reset --hard ORIG_HEAD
+    conflict    = !gitk --left-right HEAD...MERGE_HEAD
+[branch]
+    autosetupmerge = true
+[user]
+    name = Thomas Duplomb
+    email = thomas.duplomb@gmail.com
+[push]
+    default = current
+[core]
+    excludesfile = "~/.gitignore"
+    pager = less -XFR
