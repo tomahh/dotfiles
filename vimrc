@@ -48,8 +48,6 @@ set number " line number
 set list listchars=tab:▸\ ,trail:· " Highlight the trailing whitespaces
 set showcmd " Displays the command currently typing
 
-" trace 80 character line. Highlight more than 120
-
 if has("gui")
   colorscheme Monokai
   set guifont=Source\ Code\ Pro:h12
@@ -57,7 +55,7 @@ endif
 
 set t_Co=256 " 256 colors
 set background=dark
-color grb256
+color ir_black
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " indentation
