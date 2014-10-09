@@ -55,7 +55,7 @@ endif
 
 set t_Co=256 " 256 colors
 set background=dark
-color ir_black
+color grb256
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " indentation
